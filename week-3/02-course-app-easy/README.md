@@ -62,3 +62,4 @@
   Description: Lists all the courses purchased by the user.
   Input: Headers: { "username": "admin", "password": "pass" }
   Output: { purchasedCourses: [ { id: 1, title: "course title", description: "course description", price: 100, imageLink: "https://linktoimage.com", published: true }, ... ] }
+# MERN_BOOTCAMP
