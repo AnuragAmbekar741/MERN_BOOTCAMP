@@ -1,13 +1,22 @@
-import LoginSignup from "./components/Login-Signup/LoginSignup";
 import store from "./redux/store";
 import { Provider } from "react-redux";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import LoginSignup from "./components/Login-Signup/LoginSignup";
+import Home from "./components/Dashboard/Home";
 
 function App() {
   return (
     <>
       <Provider store={store}>
-        <div className="bg-[#1E1E1E] h-screen">
-          <LoginSignup />
+        <div className="bg-[#1E1E1E] w-screen h-screen">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<LoginSignup />} />
+              <Route path="/Home" element={<Home />} />
+            </Routes>
+          </BrowserRouter>
         </div>
       </Provider>
     </>

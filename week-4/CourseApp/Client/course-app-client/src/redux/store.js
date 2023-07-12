@@ -3,7 +3,7 @@ import loginSlice from "./loginSlice"
 
 const store = configureStore({
     reducer: {
-        loginToggle: loginSlice
+        user: loginSlice
     }
 })
 
