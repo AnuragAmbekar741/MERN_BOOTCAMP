@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Provider store={store}>
-        <div className="bg-[#1E1E1E] w-screen h-screen">
+        <div className="w-screen">
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<LoginSignup />} />

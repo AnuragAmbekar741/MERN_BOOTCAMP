@@ -1,1 +1,82 @@
-[{"id":8660},{"title":"course title","description":"course description","price":100,"imageLink":"https://linktoimage.com","published":true,"id":89686},{"title":"course title","description":"course description","price":100,"imageLink":"https://linktoimage.com","published":true,"id":50535},{"title":"course title","description":"course description","price":100,"imageLink":"https://linktoimage.com","published":true,"id":40200},{"title":"updated title","description":" updated course description","price":500,"imageLink":"https://linktoimage.com","published":true,"id":"89686"}]
+[
+    {
+        "title": "React",
+        "description": "State,Hooks",
+        "price": 2100,
+        "imageLink": "https://img-c.udemycdn.com/course/750x422/2320056_4fa0_6.jpg",
+        "published": true,
+        "id": 12345
+    },
+    {
+        "title": "Spring Boot",
+        "description": "Java framework",
+        "price": 3999,
+        "imageLink": "https://img-c.udemycdn.com/course/480x270/1078208_530c_3.jpg",
+        "published": true,
+        "id": 89686
+    },
+    {
+        "title": "Full stack",
+        "description": "React and Spring",
+        "price": 2199,
+        "imageLink": "https://img-c.udemycdn.com/course/480x270/4659752_7514.jpg",
+        "published": true,
+        "id": 89687
+    },
+    {
+        "title": "Python",
+        "description": "Python basics",
+        "price": 1999,
+        "imageLink": "https://img-c.udemycdn.com/course/480x270/2473048_8255_5.jpg",
+        "published": true,
+        "id": 19686
+    },
+    {
+        "title": "DSA",
+        "description": "Advance DSA course",
+        "price": 5999,
+        "imageLink": "https://img-c.udemycdn.com/course/480x270/1419186_5b21_2.jpg",
+        "published": true,
+        "id": 18345
+    },
+        {
+        "title": "React",
+        "description": "State,Hooks",
+        "price": 2100,
+        "imageLink": "https://img-c.udemycdn.com/course/750x422/2320056_4fa0_6.jpg",
+        "published": true,
+        "id": 12335
+    },
+    {
+        "title": "Spring Boot",
+        "description": "Java framework",
+        "price": 3999,
+        "imageLink": "https://img-c.udemycdn.com/course/480x270/1078208_530c_3.jpg",
+        "published": true,
+        "id": 89446
+    },
+    {
+        "title": "Full stack",
+        "description": "React and Spring",
+        "price": 2199,
+        "imageLink": "https://img-c.udemycdn.com/course/480x270/4659752_7514.jpg",
+        "published": true,
+        "id": 1234555
+    },
+    {
+        "title": "Python",
+        "description": "Python basics",
+        "price": 1999,
+        "imageLink": "https://img-c.udemycdn.com/course/480x270/2473048_8255_5.jpg",
+        "published": true,
+        "id": 191919
+    },
+    {
+        "title": "DSA",
+        "description": "Advance DSA course",
+        "price": 5999,
+        "imageLink": "https://img-c.udemycdn.com/course/480x270/1419186_5b21_2.jpg",
+        "published": true,
+        "id": 10340
+    }
+]
