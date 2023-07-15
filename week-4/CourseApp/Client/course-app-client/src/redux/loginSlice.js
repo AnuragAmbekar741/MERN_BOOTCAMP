@@ -5,7 +5,8 @@ const loginToggle = createSlice({
     initialState: {
         isLogin: true,
         token: "",
-        currentUser: {}
+        currentUser: {},
+        toggleTabs: true
     },
     reducers: {
         toggleLogin: (state) => {
@@ -18,10 +19,14 @@ const loginToggle = createSlice({
         setCurrentUser: (state, action) => {
             state.currentUser = action.payload
             console.log("Redux ", state.currentUser)
-        }
+        },
+        setToggleTabs: (state) => {
+            state.toggleTabs = !state.toggleTabs
+        },
+
     }
 
 })
 
-export const { toggleLogin, setToken, setCurrentUser } = loginToggle.actions
+export const { toggleLogin, setToken, setCurrentUser, setToggleTabs } = loginToggle.actions
 export default loginToggle.reducer
