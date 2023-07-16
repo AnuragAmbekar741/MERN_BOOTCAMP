@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
 import CourseCard from "./CourseCard";
 
+import { setCourseList, setCourse } from "../../redux/courseSlice";
+import { useDispatch } from "react-redux";
+
 const CourseContainer = ({ filter }) => {
   const token = sessionStorage.getItem("Token");
-
+  const Dispatch = useDispatch();
   const [courses, setCourses] = useState([]);
+
+  Dispatch(setCourse(""));
 
   const fetchData = () => {
     const url = "http://localhost:3000/admin/courses/";
@@ -23,6 +28,7 @@ const CourseContainer = ({ filter }) => {
       })
       .then((data) => {
         setCourses(data.courses);
+        Dispatch(setCourseList(data.courses));
         console.log(data.courses);
       })
       .catch((error) => {

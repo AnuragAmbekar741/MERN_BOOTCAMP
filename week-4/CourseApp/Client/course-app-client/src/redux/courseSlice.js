@@ -3,12 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const courseSlice = createSlice({
     name: 'courses',
     initialState: {
-        Courses: [],
+        CourseList: [],
         SelectedCourseId: ''
     },
     reducers: {
-        setCourses: (state, action) => {
-            state.Courses = action.payload
+        setCourseList: (state, action) => {
+            state.CourseList = action.payload
         },
         filterCourses: (filter, state) => {
             state.Courses.filter(course => course.includes(filter))
@@ -19,7 +19,7 @@ const courseSlice = createSlice({
     }
 })
 
-export const { setCourses, filterCourse, setCourse } = courseSlice.actions
+export const { setCourseList, filterCourse, setCourse } = courseSlice.actions
 
 export default courseSlice.reducer
 

@@ -10,9 +10,25 @@ const AddCourse = () => {
     published: false,
   });
 
-  const CourseId = useSelector((store) => store.course.SelectedCourseId);
+  var btnName = "Submit";
+
+  const Course = useSelector((store) => store.course);
+  const CourseList = Course.CourseList;
+  const CourseId = Course.SelectedCourseId;
 
   if (CourseId != "") {
+    btnName = "Update";
+    const selectedCourse = CourseList.filter(
+      (course) => course.id == CourseId
+    )[0];
+    console.log(selectedCourse);
+    // setCourseData({
+    //   title: selectedCourse.title,
+    //   description: selectedCourse.description,
+    //   price: selectedCourse.price,
+    //   imageLink: selectedCourse.imageLink,
+    //   published: selectedCourse.published,
+    // });
   }
 
   const TOKEN = sessionStorage.getItem("Token");
@@ -62,7 +78,7 @@ const AddCourse = () => {
         <input
           className="w-[200px] border border-[#4D4D4D] px-2 text-xl placeholder:text-gray-400 focus:outline-none rounded-lg mx-5"
           placeholder="@Price"
-          value={courseData.price}
+          //   value={CourseId != "" ? selectedCourse.price : courseData.price}
           onChange={(e) =>
             setCourseData({ ...courseData, price: e.target.value })
           }
@@ -77,7 +93,9 @@ const AddCourse = () => {
         <input
           className="w-full border mr-3 border-[#4D4D4D] px-2 text-xl placeholder:text-gray-400 focus:outline-none rounded-lg"
           placeholder="@Description"
-          value={courseData.description}
+          //   value={
+          //     CourseId != "" ? selectedCourse.description : courseData.description
+          //   }
           onChange={(e) =>
             setCourseData({ ...courseData, description: e.target.value })
           }
@@ -88,7 +106,9 @@ const AddCourse = () => {
           type="text"
           className=" w-[530px] focus:outline-none px-2 rounded-lg text-xl"
           placeholder="@Image URL"
-          value={courseData.imageLink}
+          //   value={
+          //     CourseId != "" ? selectedCourse.imageLink : courseData.imageLink
+          //   }
           onChange={(e) =>
             setCourseData({ ...courseData, imageLink: e.target.value })
           }
@@ -97,7 +117,7 @@ const AddCourse = () => {
           className="text-white text-lg px-5 rounded-lg border ml-3"
           onClick={postData}
         >
-          Submit
+          {btnName}
         </button>
       </div>
     </div>
