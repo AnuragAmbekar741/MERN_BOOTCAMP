@@ -12,7 +12,7 @@ const Sidebar = () => {
     <div className="w-1/5 grid rounded-lg px-5 h-[80vh] mt-16">
       <button
         className="text-white text-xl border my-5 rounded-lg h-16"
-        onClick={() => Dispatch(setToggleTabs())}
+        onClick={() => Dispatch(setToggleTabs(false))}
       >
         <MdAddHome
           style={{
@@ -25,7 +25,7 @@ const Sidebar = () => {
       </button>
       <button
         className="text-white text-xl border rounded-lg -mt-[27rem] h-16"
-        onClick={() => Dispatch(setToggleTabs())}
+        onClick={() => Dispatch(setToggleTabs(true))}
       >
         <TbSmartHome
           style={{

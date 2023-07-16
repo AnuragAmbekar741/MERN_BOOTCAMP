@@ -20,8 +20,8 @@ const loginToggle = createSlice({
             state.currentUser = action.payload
             console.log("Redux ", state.currentUser)
         },
-        setToggleTabs: (state) => {
-            state.toggleTabs = !state.toggleTabs
+        setToggleTabs: (state, action) => {
+            state.toggleTabs = action.payload
         },
 
     }

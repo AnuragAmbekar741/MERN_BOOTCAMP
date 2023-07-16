@@ -35,24 +35,26 @@ const CourseContainer = ({ filter }) => {
   }, []);
 
   useEffect(() => {
-    let filterCourses = courses.filter((course) =>
-      course.title.includes(filter)
-    );
-    if (filterCourses.length > 0) {
-      setCourses(filterCourses);
-      filterCourses = [];
-    } else {
-      setCourses(courses);
+    if (filter != "") {
+      let filterCourses = courses.filter((course) =>
+        course.title.includes(filter)
+      );
+      if (filterCourses.length > 0) {
+        setCourses(filterCourses);
+        filterCourses = [];
+      } else {
+        setCourses(courses);
+      }
+      console.log(filter);
     }
-    console.log(filter);
   }, [filter]);
 
   return (
-    <div className="w-4/5 text-white flex justify-start flex-wrap ml-2 h-[80vh] overflow-y-auto">
+    <div className="w-4/5 mt-4 text-white flex justify-start flex-wrap ml-2 h-[80vh] overflow-y-auto">
       {courses &&
-        courses.map((course, index) => {
-          return <CourseCard key={index} course={course} />;
-        })}
+        courses.map((course, index) => (
+          <CourseCard key={index} course={course} />
+        ))}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const AddCourse = () => {
   const [courseData, setCourseData] = useState({
@@ -8,6 +9,11 @@ const AddCourse = () => {
     imageLink: "",
     published: false,
   });
+
+  const CourseId = useSelector((store) => store.course.SelectedCourseId);
+
+  if (CourseId != "") {
+  }
 
   const TOKEN = sessionStorage.getItem("Token");
 
