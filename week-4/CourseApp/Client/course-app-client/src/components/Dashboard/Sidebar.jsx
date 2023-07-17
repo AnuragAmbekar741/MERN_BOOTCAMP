@@ -9,7 +9,7 @@ const Sidebar = () => {
   const Dispatch = useDispatch();
 
   return (
-    <div className="w-1/5 grid rounded-lg px-5 h-[80vh] mt-16">
+    <div className="w-1/5 grid rounded-lg px-5 h-[80vh] mt-20">
       <button
         className="text-white text-xl border my-5 rounded-lg h-16"
         onClick={() => Dispatch(setToggleTabs(false))}

@@ -98,11 +98,20 @@ app.put('/admin/courses/:courseId', authToken, (req, res) => {
   const updatedCourse = req.body
   const courseExist = COURSES.find(ele => ele.id == courseId)
   if (!courseExist) return res.status(401).json({ message: 'Invalid course id' })
-  COURSES.filter(ele => ele.id !== courseId)
-  updatedCourse["id"] = courseId
-  COURSES.push(updatedCourse)
-  writeDataJson('COURSES.json', COURSES)
-  res.json({ message: 'Course updated successfully', courses: COURSES })
+  let UpdatedCOURSES = COURSES.filter(ele => ele.id != parseInt(courseId))
+  updatedCourse["id"] = parseInt(courseId)
+  UpdatedCOURSES.push(updatedCourse)
+  writeDataJson('COURSES.json', UpdatedCOURSES)
+  res.json({ message: 'Course updated successfully', courses: UpdatedCOURSES })
+});
+
+app.post('/admin/courses/:courseId', authToken, (req, res) => {
+  const courseId = req.params.courseId
+  const courseExist = COURSES.find(ele => ele.id == courseId)
+  if (!courseExist) return res.status(401).json({ message: 'Invalid course id' })
+  let UpdatedCOURSES = COURSES.filter(ele => ele.id != parseInt(courseId))
+  writeDataJson('COURSES.json', UpdatedCOURSES)
+  res.json({ message: 'Course Deleted successfully', courses: UpdatedCOURSES })
 });
 
 app.get('/admin/courses', authToken, (req, res) => {

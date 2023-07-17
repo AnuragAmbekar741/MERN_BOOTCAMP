@@ -10,16 +10,14 @@ const courseSlice = createSlice({
         setCourseList: (state, action) => {
             state.CourseList = action.payload
         },
-        filterCourses: (filter, state) => {
-            state.Courses.filter(course => course.includes(filter))
-        },
+
         setCourse: (state, action) => {
             state.SelectedCourseId = action.payload
         }
     }
 })
 
-export const { setCourseList, filterCourse, setCourse } = courseSlice.actions
+export const { setCourseList, setCourse } = courseSlice.actions
 
 export default courseSlice.reducer
 
