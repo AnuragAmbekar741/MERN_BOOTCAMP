@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCourseList } from "../../redux/courseSlice";
 
 import { RiDeleteBin7Fill } from "react-icons/ri";
+import { setToggleTabs } from "../../redux/loginSlice";
 
 const AddCourse = () => {
   const [courseData, setCourseData] = useState({
@@ -91,6 +92,7 @@ const AddCourse = () => {
     console.log(json);
     Dispatch(setCourseList(json.courses));
     console.log("Course list", CourseList);
+    Dispatch(setToggleTabs(true));
   };
 
   const postData = async () => {
