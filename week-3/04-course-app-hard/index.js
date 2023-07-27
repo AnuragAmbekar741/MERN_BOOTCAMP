@@ -1,11 +1,32 @@
 const express = require('express');
+const mongoose = require('mongoose')
+const jwt = require('jsonwebtoken')
+
 const app = express();
 
 app.use(express.json());
 
-let ADMINS = [];
-let USERS = [];
-let COURSES = [];
+const secret = 'secrEtKeY'
+
+const generateToken = (user) => {
+  const payload = { username: user.username }
+  return jwt.sign(payload, SECRET, { expiresIn: '1h' })
+}
+
+const authToken = (req, res, next) => {
+  var token = req.headers.authorization
+  if (token) {
+    token = token.split(' ')[1]
+    jwt.verify(token, SECRET, (err, user) => {
+      if (err) res.sendStatus(403)
+      req.user = user
+      next()
+    })
+  }
+  else req.sendStatus(401)
+}
+
+
 
 // Admin routes
 app.post('/admin/signup', (req, res) => {
