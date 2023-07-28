@@ -50,7 +50,8 @@ const authenticateJwt = (req, res, next) => {
 
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
-mongoose.connect('mongodb+srv://123Aja_456:123Aja@456@cluster0.w9maclg.mongodb.net/Courses', { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
+mongoose.connect('mongodb+srv://123Aja_456:123Anurag456@cluster0.w9maclg.mongodb.net/CourseApp',
+  { useNewUrlParser: true, useUnifiedTopology: true, dbName: "CourseApp" });
 
 app.post('/admin/signup', (req, res) => {
   const { username, password } = req.body;
