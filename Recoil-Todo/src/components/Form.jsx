@@ -18,7 +18,7 @@ const Form = () => {
   }
 
   return (
-    <div className="flex mt-40 justify-between">
+    <div className="flex mt-40 justify-between h-10">
       <input
         type="text"
         value={input}
