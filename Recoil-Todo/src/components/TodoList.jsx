@@ -19,7 +19,7 @@ const TodoList = () => {
           return (
             <div
               className={`border rounded-lg py-3 px-2 my-5 flex justify-start ml-3 ${
-                todo.status ? "border border-green-600" : "border-red-500"
+                todo.status ? "border border-green-600" : "border-red-600"
               }`}
               key={todo.id}
             >
