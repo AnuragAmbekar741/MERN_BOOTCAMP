@@ -1,4 +1,4 @@
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import { todoListState } from "../store/atoms/todoList";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { RxCrossCircled } from "react-icons/rx";

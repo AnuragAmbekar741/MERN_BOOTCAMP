@@ -6,9 +6,11 @@ function App() {
   return (
     <>
       <RecoilRoot>
-        <div className="w-full h-screen grid justify-center bg-slate-300">
-          <Form />
-          <TodoList />
+        <div className="w-full h-screen grid justify-center align-middle bg-slate-300">
+          <div className="w-1/3">
+            <Form />
+            <TodoList />
+          </div>
         </div>
       </RecoilRoot>
     </>
