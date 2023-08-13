@@ -25,7 +25,7 @@ const TodoList = () => {
             >
               <h2>{todo.todo}</h2>
               <AiOutlineCheckCircle
-                className={`text-2xl ml-48`}
+                className={`text-2xl ml-48 text-black`}
                 onClick={() => {
                   changeStatus(todo, true);
                 }}
