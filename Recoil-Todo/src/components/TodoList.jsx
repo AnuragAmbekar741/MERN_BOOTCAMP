@@ -1,15 +1,15 @@
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { todoListState } from "../store/atoms/todoList";
 import Todo from "./Todo";
 
 const TodoList = () => {
-  const [todoList, setTodoList] = useRecoilState(todoListState);
+  const todoList = useRecoilValue(todoListState);
 
   return (
     <div>
       {todoList &&
         todoList.map((todo) => {
-          return <Todo todo={todo} key={todo.id} />;
+          return <Todo {...todo} key={todo.id} />;
         })}
     </div>
   );
